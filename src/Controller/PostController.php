@@ -8,22 +8,22 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
-class IndexController extends AbstractController
+class PostController extends AbstractController
 {
+
     /**
-     * @Route("/user", name="user", methods={"GET"})
+     * @Route("/posts", name="posts", methods={"GET"})
      */
-    public function index(): JsonResponse
+    public function getPosts(): JsonResponse
     {
         return new JsonResponse(
             [
-                'form' => [
-                    'name' => 'Babyliza',
-                    'surname' => 'Medoranda',
-                    'email' => 'el@el.el',
-                    'password' => '',
+                'posts' => [
+                    ['id' => 1, 'title' => "FooBarness", 'content' => "Foo, Bar, Baz"],
+                    ['id' => 2, 'title' => "BarBazness", 'content' => "Bar, Baz, Booze"],
                 ],
             ], JsonResponse::HTTP_OK
         );
     }
+
 }

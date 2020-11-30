@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Controller;
+namespace App\Tests\Controller;
 
+use App\Controller\IndexController;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
